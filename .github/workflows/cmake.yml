@@ -12,9 +12,17 @@ jobs:
       run: |
         echo ${{runner.workspace}};
         echo $GITHUB_WORKSPACE;
+        gcc --version
+        cmake --version
 
     - name: run build.sh
       shell: bash
       run:
           sh build.sh
+
+    - name: upload artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: output
+        path: output
 
