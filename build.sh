@@ -8,11 +8,11 @@ mkdir -p deps;
 cd deps;
 wget https://github.com/phantom9999/bazel_rule/releases/download/gflags-2.2.2/output.zip
 unzip output.zip
-tree
+ls;
 
 cd ${workspace};
-export CMAKE_INCLUDE_PATH=${workspace}/deps/output/include;
-export CMAKE_LIBRARY_PATH=${workspace}/deps/output/lib:${workspace}/deps/output/lib64;
+export CMAKE_INCLUDE_PATH=${workspace}/deps/include;
+export CMAKE_LIBRARY_PATH=${workspace}/deps/lib:${workspace}/deps/output/lib64;
 
 # 下载源码
 wget https://github.com/google/glog/archive/v0.4.0.tar.gz \
