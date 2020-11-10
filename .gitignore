@@ -2,3 +2,6 @@ gflags-2.2.2/
 v2.2.2.tar.gz
 glog-0.4.0/
 v0.4.0.tar.gz
+deps/
+glog-0.4.0.tar.gz
+output/

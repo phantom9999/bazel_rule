@@ -13,6 +13,7 @@ ls;
 cd ${workspace};
 export CMAKE_INCLUDE_PATH=${workspace}/deps/include;
 export CMAKE_LIBRARY_PATH=${workspace}/deps/lib:${workspace}/deps/output/lib64;
+export gflags_DIR=${workspace}/deps;
 
 # 下载源码
 wget https://github.com/google/glog/archive/v0.4.0.tar.gz \
