@@ -8,6 +8,7 @@ mkdir -p deps;
 cd deps;
 wget https://github.com/phantom9999/bazel_rule/releases/download/gflags-2.2.2/output.zip
 unzip output.zip
+tree
 
 cd ${workspace};
 export CMAKE_INCLUDE_PATH=${workspace}/deps/output/include;
