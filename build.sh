@@ -11,3 +11,8 @@ cmake . -DCMAKE_BUILD_TYPE=RelWithDebInfo \
     -DGFLAGS_NAMESPACE=google
 make install -j4
 
+cd ${workspace};
+cp BUILD output/
+cp WORKSPACE output/
+
+
