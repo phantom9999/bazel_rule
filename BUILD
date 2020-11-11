@@ -5,7 +5,7 @@ cc_library(
     srcs = ["lib/libgflags.a"],
     includes = ["include"],
     #hdrs = ["include"],
-    linkopts = ["lib/libgflags.a", "-pthread"],
+    linkopts = ["-pthread"],
     visibility = ["//visibility:public"],
 )
 
