@@ -1,9 +1,9 @@
-name: build
+name: release
 
 on:
   push:
-    branches-ignore:
-      - 'main'
+    tags:
+    - '*'
 
 jobs:
   build:
@@ -23,9 +23,13 @@ jobs:
       run:
           sh build.sh
 
-    - name: upload artifact
-      uses: actions/upload-artifact@v2
-      with:
-        name: output
-        path: output
+    - name: make artifact
+      run: |
+        zip output.zip -r output/*
 
+    - name: release
+      uses: ncipollo/release-action@v1
+      with:
+        allowUpdates: true
+        artifacts: "output.zip"
+        token: ${{ secrets.GITHUB_TOKEN }}
