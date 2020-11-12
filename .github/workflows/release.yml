@@ -32,5 +32,6 @@ jobs:
     - name: release
       uses: ncipollo/release-action@v1
       with:
+        allowUpdates: true
         artifacts: "output.zip"
         token: ${{ secrets.GITHUB_TOKEN }}
