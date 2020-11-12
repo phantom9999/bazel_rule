@@ -1,0 +1,45 @@
+name: release
+
+on: [release]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: display env
+      run: |
+        echo ${{runner.workspace}};
+        echo $GITHUB_WORKSPACE;
+        gcc --version
+        cmake --version
+
+    - name: run build.sh
+      shell: bash
+      run:
+          sh build.sh
+
+    - name: upload artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: output
+        path: output
+  release:
+    runs-on: ubuntu-latest
+    needs: [build]
+    steps:
+    - uses: actions/checkout@master
+    - name: Create release
+      uses: Roang-zero1/github-create-release-action@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Create GitHub release
+      uses: Roang-zero1/github-upload-release-artifacts-action@master
+      with:
+        args:
+        - output.zip
+
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
