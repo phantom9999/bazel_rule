@@ -43,6 +43,7 @@ jobs:
       with:
         args:
         - output.zip
+
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
