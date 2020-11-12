@@ -24,3 +24,8 @@ cmake . -DCMAKE_BUILD_TYPE=RelWithDebInfo \
     -DCMAKE_INSTALL_PREFIX=${workspace}/output 
 make install -j4
 
+cd ${workspace};
+cp WORKSPACE output/
+cp BUILD output/
+
+
