@@ -25,7 +25,8 @@ jobs:
 
     - name: make artifact
       run: |
-        zip output.zip -r output/*
+        cd output;
+        zip ../output.zip -r *
 
     - name: release
       uses: ncipollo/release-action@v1
