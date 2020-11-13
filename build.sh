@@ -3,11 +3,14 @@ set -e
 
 workspace=`pwd`;
 
-wget https://github.com/gflags/gflags/archive/v2.2.2.tar.gz -O gflags-2.2.2.tar.gz
-tar -xf gflags-2.2.2.tar.gz
-cd gflags-2.2.2/
-cmake . -DCMAKE_BUILD_TYPE=RelWithDebInfo \
-    -DCMAKE_INSTALL_PREFIX=${workspace}/output \
-    -DGFLAGS_NAMESPACE=google
+wget https://github.com/protocolbuffers/protobuf/archive/v3.5.0.tar.gz \
+    -O protobuf-3.5.0.tar.gz;
+tar -xf protobuf-3.5.0.tar.gz;
+cd protobuf-3.5.0;
+sh autogen.sh;
+./configure --with-pic=yes \
+    --enable-shared=no \
+    --prefix=${workspace}/output
+
 make install -j4
 
