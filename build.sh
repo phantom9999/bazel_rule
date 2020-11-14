@@ -9,10 +9,10 @@ wget https://github.com/phantom9999/bazel_rule/releases/download/glog-0.4.0/outp
 wget https://github.com/phantom9999/bazel_rule/releases/download/gflags-2.2.2/output.zip -O gflags.zip;
 wget https://github.com/phantom9999/bazel_rule/releases/download/protobuf-3.5.0/output.zip -O protobuf.zip;
 wget https://github.com/phantom9999/bazel_rule/releases/download/leveldb-1.22/output.zip -O leveldb.zip;
-unzip glog.zip;
-unzip gflags.zip;
-unzip protobuf.zip;
-unzip leveldb.zip;
+unzip -n glog.zip;
+unzip -n gflags.zip;
+unzip -n protobuf.zip;
+unzip -n leveldb.zip;
 export PATH=`pwd`/bin:$PATH;
 export CMAKE_INCLUDE_PATH=`pwd`/include;
 export CMAKE_LIBRARY_PATH=`pwd`/lib;
