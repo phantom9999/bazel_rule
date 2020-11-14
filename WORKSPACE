@@ -13,13 +13,13 @@ http_archive(
 http_archive(
     name = "com_google_glog",
     url = "https://github.com/phantom9999/bazel_rule/releases/download/glog-0.4.0/output.zip",
-    sha256 = "cc6eb031cffc319e9da24a60ef95adadb61edb95f57aa7ee6361ab230358aa7a",
+    sha256 = "43c674ed07cf50d006a5dd2d97c455108bcc3d15364eb38da0d343c459a46737",
 )
 
 http_archive(
     name = "com_google_gflags",
     url = "https://github.com/phantom9999/bazel_rule/releases/download/gflags-2.2.2/output.zip",
-    sha256 = "56b5af4f60bf1b9e5e1adbcb91092bd17a4be992fd47807a8cf99bf0a4dd6680",
+    sha256 = "8c3dfac258d7d182f507e33312582bb63e174e3f0e726a90aee98bebe8b43c5d",
 )
 
 http_archive(
@@ -37,11 +37,17 @@ http_archive(
 http_archive(
     name = "com_google_leveldb",
     url = "https://github.com/phantom9999/bazel_rule/releases/download/leveldb-1.22/output.zip",
-    sha256 = "b8f46a4eebd48315b594c65f3f512fc1a95b07693de4c6dac913e64a0ff7c8bf",
+    sha256 = "eacf09277f0e1b9f2a62971bb243193edceaf0134bff5ae19921bdc70dcb902c",
 )
 
 http_archive(
     name = "com_google_gtest",
     url = "https://github.com/phantom9999/bazel_rule/releases/download/googletest-release-1.10.0/output.zip",
     sha256 = "b0bf2a49143dc501f635ef4306b7e3478d35ab012e8684e53a091b9463054bb3",
+)
+
+http_archive(
+    name = "com_apache_brpc",
+    url = "https://github.com/phantom9999/bazel_rule/releases/download/incubator-brpc-0.9.7_beta/output.zip",
+    #sha256 = "b0bf2a49143dc501f635ef4306b7e3478d35ab012e8684e53a091b9463054bb3",
 )
