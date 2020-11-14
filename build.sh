@@ -14,3 +14,7 @@ sh autogen.sh;
 
 make install -j4
 
+cd ${workspace};
+cp BUILD output/;
+cp WORKSPACE output/;
+
