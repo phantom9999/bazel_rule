@@ -1,1 +1,1 @@
-workspace(name = "com_google_gflags")
+workspace(name = "com_apache_brpc")

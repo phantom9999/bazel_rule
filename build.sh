@@ -3,11 +3,31 @@ set -e
 
 workspace=`pwd`;
 
-wget https://github.com/gflags/gflags/archive/v2.2.2.tar.gz -O gflags-2.2.2.tar.gz
-tar -xf gflags-2.2.2.tar.gz
-cd gflags-2.2.2/
+mkdir deps;
+cd deps;
+wget https://github.com/phantom9999/bazel_rule/releases/download/glog-0.4.0/output.zip -O glog.zip;
+wget https://github.com/phantom9999/bazel_rule/releases/download/gflags-2.2.2/output.zip -O gflags.zip;
+wget https://github.com/phantom9999/bazel_rule/releases/download/protobuf-3.5.0/output.zip -O protobuf.zip;
+wget https://github.com/phantom9999/bazel_rule/releases/download/leveldb-1.22/output.zip -O leveldb.zip;
+unzip glog.zip;
+unzip gflags.zip;
+unzip protobuf.zip;
+unzip leveldb.zip;
+export PATH=`pwd`/bin:$PATH;
+export CMAKE_INCLUDE_PATH=`pwd`/include;
+export CMAKE_LIBRARY_PATH=`pwd`/lib;
+
+cd ${workspace};
+wget https://github.com/apache/incubator-brpc/archive/0.9.7.tar.gz -O incubator-brpc-0.9.7.tar.gz;
+tar -xf incubator-brpc-0.9.7.tar.gz;
+cd incubator-brpc-0.9.7;
+
 cmake . -DCMAKE_BUILD_TYPE=RelWithDebInfo \
     -DCMAKE_INSTALL_PREFIX=${workspace}/output \
-    -DGFLAGS_NAMESPACE=google
+    -DWITH_GLOG=ON \
+    -DDOWNLOAD_GTEST=OFF
 make install -j4
 
+cd ${workspace};
+cp BUILD output/;
+cp workspace output/;
