@@ -22,3 +22,10 @@ http_archive(
     sha256 = "56b5af4f60bf1b9e5e1adbcb91092bd17a4be992fd47807a8cf99bf0a4dd6680",
 )
 
+http_archive(
+    name = "com_google_protobuf",
+    url = "https://github.com/phantom9999/bazel_rule/releases/download/protobuf_demo/output.zip",
+    #sha256 = "56b5af4f60bf1b9e5e1adbcb91092bd17a4be992fd47807a8cf99bf0a4dd6680",
+)
+
+

@@ -4,7 +4,6 @@ cc_binary(
     name="demo",
     srcs=["main.cc"],
     deps = [
-        "@com_google_gflags//:gflags",
+        "@com_google_protobuf//:protobuf",
     ],
 )
-
