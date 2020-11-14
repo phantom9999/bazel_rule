@@ -9,7 +9,7 @@ cc_library(
         "@com_google_leveldb//:leveldb",
         "@com_google_protobuf//:protobuf",
         "@com_google_glog//:glog",
-        "com_google_gflags//:gflags",
+        "@com_google_gflags//:gflags",
     ],
     linkopts = ["-pthread"],
     visibility = ["//visibility:public"],
