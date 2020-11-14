@@ -4,7 +4,7 @@ cc_library(
     name = "brpc",
     srcs = ["lib/libbrpc.a"],
     includes = ["include"],
-    hdrs = glob(["include/**/*.h"]),
+    hdrs = glob(["include/**/*.h", "include/**/*.hpp"]),
     deps = [
         "@com_google_leveldb//:leveldb",
         "@com_google_protobuf//:protobuf",
