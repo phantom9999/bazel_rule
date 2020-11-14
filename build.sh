@@ -3,11 +3,16 @@ set -e
 
 workspace=`pwd`;
 
-wget https://github.com/gflags/gflags/archive/v2.2.2.tar.gz -O gflags-2.2.2.tar.gz
-tar -xf gflags-2.2.2.tar.gz
-cd gflags-2.2.2/
+wget https://github.com/google/leveldb/archive/1.22.tar.gz -O leveldb-1.22.tar.gz
+tar -xf leveldb-1.22.tar.gz;
+cd leveldb-1.22;
+
 cmake . -DCMAKE_BUILD_TYPE=RelWithDebInfo \
     -DCMAKE_INSTALL_PREFIX=${workspace}/output \
-    -DGFLAGS_NAMESPACE=google
+    -DLEVELDB_BUILD_TESTS=OFF \
+    -DLEVELDB_BUILD_BENCHMARKS=OFF 
 make install -j4
 
+cd ${workspace};
+cp BUILD output/
+cp WORKSPACE output/
