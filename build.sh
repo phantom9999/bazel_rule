@@ -3,11 +3,14 @@ set -e
 
 workspace=`pwd`;
 
-wget https://github.com/gflags/gflags/archive/v2.2.2.tar.gz -O gflags-2.2.2.tar.gz
-tar -xf gflags-2.2.2.tar.gz
-cd gflags-2.2.2/
+wget https://github.com/google/googletest/archive/release-1.10.0.tar.gz -O googletest-release-1.10.0.tar.gz
+tar -xf googletest-release-1.10.0.tar.gz;
+cd googletest-release-1.10.0;
+
 cmake . -DCMAKE_BUILD_TYPE=RelWithDebInfo \
-    -DCMAKE_INSTALL_PREFIX=${workspace}/output \
-    -DGFLAGS_NAMESPACE=google
+    -DCMAKE_INSTALL_PREFIX=${workspace}/output;
 make install -j4
 
+cd ${workspace};
+cp BUILD output/;
+cp WORKSPACE output/;
