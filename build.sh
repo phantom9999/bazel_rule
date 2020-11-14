@@ -3,11 +3,13 @@ set -e
 
 workspace=`pwd`;
 
-wget https://github.com/gflags/gflags/archive/v2.2.2.tar.gz -O gflags-2.2.2.tar.gz
-tar -xf gflags-2.2.2.tar.gz
-cd gflags-2.2.2/
+wget https://github.com/google/snappy/archive/1.1.8.tar.gz \
+    snappy-1.1.8.tar.gz
+tar -xf snappy-1.1.8.tar.gz;
+cd snappy-1.1.8;
 cmake . -DCMAKE_BUILD_TYPE=RelWithDebInfo \
     -DCMAKE_INSTALL_PREFIX=${workspace}/output \
-    -DGFLAGS_NAMESPACE=google
+    -DSNAPPY_BUILD_TESTS=OFF
+
 make install -j4
 
