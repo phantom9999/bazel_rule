@@ -29,6 +29,7 @@ cmake . -DCMAKE_BUILD_TYPE=RelWithDebInfo \
 make install -j4
 
 cd ${workspace};
+rm output/lib/libbrpc.so
 cp BUILD output/;
-cp workspace output/;
+cp WORKSPACE output/;
 
