@@ -21,6 +21,7 @@ wget https://github.com/google/glog/archive/v0.4.0.tar.gz \
 tar -xf glog-0.4.0.tar.gz
 cd glog-0.4.0/
 cmake . -DCMAKE_BUILD_TYPE=RelWithDebInfo \
+    -DCMAKE_CXX_FLAGS=-fPIC \
     -DCMAKE_INSTALL_PREFIX=${workspace}/output 
 make install -j4
 
