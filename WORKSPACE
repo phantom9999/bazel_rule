@@ -39,3 +39,9 @@ http_archive(
     url = "https://github.com/phantom9999/bazel_rule/releases/download/leveldb-1.22/output.zip",
     sha256 = "b8f46a4eebd48315b594c65f3f512fc1a95b07693de4c6dac913e64a0ff7c8bf",
 )
+
+http_archive(
+    name = "com_google_gtest",
+    url = "https://github.com/phantom9999/bazel_rule/releases/download/googletest-release-1.10.0/output.zip",
+    sha256 = "b0bf2a49143dc501f635ef4306b7e3478d35ab012e8684e53a091b9463054bb3",
+)
