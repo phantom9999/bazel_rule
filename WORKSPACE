@@ -31,6 +31,11 @@ http_archive(
 http_archive(
     name = "com_google_snappy",
     url = "https://github.com/phantom9999/bazel_rule/releases/download/snappy-1.1.8/output.zip",
-    #sha256 = "3db8761ea3bbcb90ae8a0a99e7ee9870c98dbda00e22725728ea4d79ddd0a835",
+    sha256 = "b7be9a8d16947d0373ddc21f92c2e175674da4b0b430fa3840bc20b001bf0d72",
 )
 
+http_archive(
+    name = "com_google_leveldb",
+    url = "https://github.com/phantom9999/bazel_rule/releases/download/leveldb-1.22/output.zip",
+    sha256 = "b8f46a4eebd48315b594c65f3f512fc1a95b07693de4c6dac913e64a0ff7c8bf",
+)
