@@ -8,6 +8,7 @@ tar -xf gflags-2.2.2.tar.gz
 cd gflags-2.2.2/
 cmake . -DCMAKE_BUILD_TYPE=RelWithDebInfo \
     -DCMAKE_INSTALL_PREFIX=${workspace}/output \
+    -DCMAKE_CXX_FLAGS=-fPIC \
     -DGFLAGS_NAMESPACE=google
 make install -j4
 
