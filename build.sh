@@ -9,6 +9,7 @@ cd leveldb-1.22;
 
 cmake . -DCMAKE_BUILD_TYPE=RelWithDebInfo \
     -DCMAKE_INSTALL_PREFIX=${workspace}/output \
+    -DCMAKE_CXX_FLAGS=-fPIC \
     -DLEVELDB_BUILD_TESTS=OFF \
     -DLEVELDB_BUILD_BENCHMARKS=OFF 
 make install -j4
