@@ -24,8 +24,13 @@ http_archive(
 
 http_archive(
     name = "com_google_protobuf",
-    url = "https://github.com/phantom9999/bazel_rule/releases/download/protobuf_demo/output.zip",
+    url = "https://github.com/phantom9999/bazel_rule/releases/download/protobuf-3.5.0/output.zip",
     sha256 = "3db8761ea3bbcb90ae8a0a99e7ee9870c98dbda00e22725728ea4d79ddd0a835",
 )
 
+http_archive(
+    name = "com_google_snappy",
+    url = "https://github.com/phantom9999/bazel_rule/releases/download/snappy-1.1.8/output.zip",
+    #sha256 = "3db8761ea3bbcb90ae8a0a99e7ee9870c98dbda00e22725728ea4d79ddd0a835",
+)
 
