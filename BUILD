@@ -13,7 +13,7 @@ cc_library(
     name = "gmock_main",
     srcs = ["lib/libgmock_main.a"],
     deps = [
-        "@//:gmock",
+        ":gmock",
     ],
     visibility = ["//visibility:public"],
 )
@@ -31,7 +31,7 @@ cc_library(
     name = "gtest_main",
     srcs = ["lib/libgtest_main.a"],
     deps = [
-        "@//:gtest",
+        ":gtest",
     ],
     visibility = ["//visibility:public"],
 )
