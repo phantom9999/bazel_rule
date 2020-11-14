@@ -12,4 +12,5 @@ cmake . -DCMAKE_BUILD_TYPE=RelWithDebInfo \
     -DSNAPPY_BUILD_TESTS=OFF
 
 make install -j4
-
+cp BUILD output/
+cp WORKSPACE output/
