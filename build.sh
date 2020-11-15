@@ -1,6 +1,8 @@
 set -x
 set -e
 
+echo ${OS_ENV};
+
 workspace=`pwd`;
 
 wget https://github.com/google/snappy/archive/1.1.8.tar.gz \
