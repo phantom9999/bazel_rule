@@ -30,8 +30,7 @@ cd glog-0.4.0/
 cmake3 . -DCMAKE_BUILD_TYPE=RelWithDebInfo \
     -DCMAKE_CXX_FLAGS=-fPIC \
     -DCMAKE_INSTALL_PREFIX=${workspace}/output \
-    -DCMAKE_LIBRARY_OUTPUT_DIRECTORY=${workspace}/output/lib \
-    -DCMAKE_ARCHIVE_OUTPUT_DIRECTORY=${workspace}/output/lib
+    -DCMAKE_INSTALL_LIBDIR=lib
 make install -j4
 
 cd ${workspace};
