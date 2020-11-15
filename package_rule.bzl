@@ -59,6 +59,8 @@ def get_package(package, tag, os = "centos7"):
         name = package,
         url = "https://github.com/phantom9999/bazel_rule/releases/download/%s/%s.tar.gz" % (tagname, os),
         sha256 = sha256_data,
+        build_file = "@//patch:%s.BUILD" % (package),
+        workspace_file = "@//patch:%s.%s.WORKSPACE" % (package, os)
     )
 
 
