@@ -11,6 +11,7 @@ cd gflags-2.2.2/
 cmake3 . -DCMAKE_BUILD_TYPE=RelWithDebInfo \
     -DCMAKE_INSTALL_PREFIX=${workspace}/output \
     -DCMAKE_CXX_FLAGS=-fPIC \
+    -DCMAKE_INSTALL_LIBDIR=lib \
     -DGFLAGS_NAMESPACE=google
 make install -j4
 
