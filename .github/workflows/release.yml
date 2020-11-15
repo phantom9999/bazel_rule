@@ -16,7 +16,7 @@ jobs:
     - name: prepare env
       run: |
         yum install -y epel-release
-        yum install -y gcc-c++ cmake3 make wget autoconf automake libtool  openssl-devel zlib-devel
+        yum install -y gcc-c++ cmake3 make wget autoconf automake libtool  openssl-devel zlib-devel zip unzip
     - uses: actions/checkout@v2
     - name: display env
       run: |
@@ -53,7 +53,7 @@ jobs:
     steps:
     - name: prepare env
       run: |
-        yum install -y gcc-c++ cmake make wget autoconf automake libtool openssl-devel zlib-devel
+        yum install -y gcc-c++ cmake make wget autoconf automake libtool openssl-devel zlib-devel zip unzip
     - uses: actions/checkout@v2
     - name: display env
       run: |
