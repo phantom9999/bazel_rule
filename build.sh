@@ -14,7 +14,7 @@ else
   wget https://github.com/phantom9999/bazel_rule/releases/download/gflags-2.2.2/centos8.tar.gz -O gflags.tar.gz
 fi
 
-unzip gflags.tar.gz
+tar -xf gflags.tar.gz
 ls;
 
 cd ${workspace};
