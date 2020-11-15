@@ -34,13 +34,14 @@ jobs:
     - name: make artifact
       run: |
         cd output;
-        zip ../centos7.zip -r *
+        zip ../centos7.zip -r *;
+        tar -czf ../centos7.tar.gz *;
 
     - name: release
       uses: ncipollo/release-action@v1
       with:
         allowUpdates: true
-        artifacts: "centos7.zip"
+        artifacts: "centos7.zip,centos7.tar.gz"
         token: ${{ secrets.GITHUB_TOKEN }}
 
   centos8:
@@ -70,11 +71,12 @@ jobs:
     - name: make artifact
       run: |
         cd output;
-        zip ../centos8.zip -r *
+        zip ../centos8.zip -r *;
+        tar -czf ../centos8.tar.gz *;
 
     - name: release
       uses: ncipollo/release-action@v1
       with:
         allowUpdates: true
-        artifacts: "centos8.zip"
+        artifacts: "centos8.zip,centos8.tar.gz"
         token: ${{ secrets.GITHUB_TOKEN }}
