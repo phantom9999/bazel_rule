@@ -4,7 +4,6 @@ packages = {
     "gflags-2.2.2" : {
         "centos7": "",
         "centos8": "",
-        "output": "8c3dfac258d7d182f507e33312582bb63e174e3f0e726a90aee98bebe8b43c5d",
     }, 
     "glog-0.4.0" : {
         "centos7": "",
@@ -54,7 +53,7 @@ def get_package(package, tag, os = "centos7"):
     
     http_archive(
         name = package,
-        url = "https://github.com/phantom9999/bazel_rule/releases/download/%s/%s.zip" % (tag, os),
+        url = "https://github.com/phantom9999/bazel_rule/releases/download/%s/%s.tar.gz" % (tag, os),
         sha256 = sha256_data,
     )
 
@@ -66,6 +65,6 @@ def try_package(package, tag, os = "centos7"):
         return
     http_archive(
         name = package,
-        url = "https://github.com/phantom9999/bazel_rule/releases/download/%s/%s.zip" % (tag, os)
+        url = "https://github.com/phantom9999/bazel_rule/releases/download/%s/%s.tar.gz" % (tag, os)
     )
 
