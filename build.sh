@@ -1,6 +1,8 @@
 set -x
 set -e
 
+echo ${OS_ENV};
+
 workspace=`pwd`;
 
 wget https://github.com/google/leveldb/archive/1.22.tar.gz -O leveldb-1.22.tar.gz
@@ -11,7 +13,7 @@ cmake . -DCMAKE_BUILD_TYPE=RelWithDebInfo \
     -DCMAKE_INSTALL_PREFIX=${workspace}/output \
     -DCMAKE_CXX_FLAGS=-fPIC \
     -DLEVELDB_BUILD_TESTS=OFF \
-    -DLEVELDB_BUILD_BENCHMARKS=OFF 
+    -DLEVELDB_BUILD_BENCHMARKS=OFF
 make install -j4
 
 cd ${workspace};
