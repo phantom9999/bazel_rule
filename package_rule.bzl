@@ -41,7 +41,7 @@ def get_package(package, tag, os = "centos7"):
     if package in native.existing_rules():
         return
     tagname = alias_tag.get(tag)
-    if tagname = None:
+    if tagname == None:
         tagname = tag
     tag_data = packages.get(tagname)
     if tag_data == None:
