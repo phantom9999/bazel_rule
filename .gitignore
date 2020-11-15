@@ -5,3 +5,4 @@ v0.4.0.tar.gz
 deps/
 glog-0.4.0.tar.gz
 output/
+.idea/

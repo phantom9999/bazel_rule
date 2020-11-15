@@ -8,8 +8,13 @@ workspace=`pwd`;
 # 拉取依赖
 mkdir -p deps;
 cd deps;
-wget https://github.com/phantom9999/bazel_rule/releases/download/gflags-2.2.2/output.zip
-unzip output.zip
+if [[ ${OS_ENV} == "centos7" ]]; then
+  wget https://github.com/phantom9999/bazel_rule/releases/download/gflags-2.2.2/centos7.zip -O gflags.zip
+else
+  wget https://github.com/phantom9999/bazel_rule/releases/download/gflags-2.2.2/centos8.zip -O gflags.zip
+fi
+
+unzip gflags.zip
 ls;
 
 cd ${workspace};
@@ -28,7 +33,12 @@ cmake3 . -DCMAKE_BUILD_TYPE=RelWithDebInfo \
 make install -j4
 
 cd ${workspace};
-cp WORKSPACE output/
+if [[ ${OS_ENV} == "centos7" ]]; then
+  cp centos7.WORKSPACE output/WORKSPACE
+else
+  cp centos8.WORKSPACE output/WORKSPACE
+fi
+
 cp BUILD output/
 
 
