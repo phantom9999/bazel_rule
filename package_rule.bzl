@@ -10,15 +10,15 @@ packages = {
         "centos8": "b48dda89dfb015f72610a040870d8a752e688db74b94d1d33edb8a861fa9e74b",
     }, 
     "protobuf-3.5.0" : {
-        "centos7": "",
+        "centos7": "dd20928de69350b6ffeb01c6384a286a0894d810bb2c48ba6b53854ec291ee2b",
         "centos8": "",
     }, 
     "snappy-1.1.8" : {
-        "centos7": "",
+        "centos7": "939dbe5c6e6df97657680d8f83a0bfe3788ffbc372cc88111954cdd281a32c04",
         "centos8": "",
     }, 
     "leveldb-1.22" : {
-        "centos7": "",
+        "centos7": ""ca17db3d02d80443e671018cc70dc5b8c4d79ea2d14d6d5806605d0d68f2cbcc",
         "centos8": "",
     }, 
     "googletest-release-1.10.0" : {
@@ -32,7 +32,7 @@ packages = {
 }
 
 alias_tag = {
-    "incubator-brpc-0.9.7": "incubator-brpc-0.9.7_beta",
+    "incubator-brpc-0.9.7": "incubator-brpc-0.9.7_beta1",
 }
 
 def get_package(package, tag, os = "centos7"):

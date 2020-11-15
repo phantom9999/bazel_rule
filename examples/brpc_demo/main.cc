@@ -8,7 +8,7 @@ DEFINE_int32(idle_timeout_s, -1, "Connection will be closed if there is no "
              "read/write operations during the last `idle_timeout_s'");
 
 int main(int argc, char* argv[]) {
-    GFLAGS_NS::ParseCommandLineFlags(&argc, &argv, true);
+    google::ParseCommandLineFlags(&argc, &argv, true);
     brpc::Server server;
     brpc::ServerOptions options;
     options.idle_timeout_sec = FLAGS_idle_timeout_s;
