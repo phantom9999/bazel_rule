@@ -18,7 +18,7 @@ packages = {
         "centos8": "",
     }, 
     "leveldb-1.22" : {
-        "centos7": ""ca17db3d02d80443e671018cc70dc5b8c4d79ea2d14d6d5806605d0d68f2cbcc",
+        "centos7": "ca17db3d02d80443e671018cc70dc5b8c4d79ea2d14d6d5806605d0d68f2cbcc",
         "centos8": "",
     }, 
     "googletest-release-1.10.0" : {
