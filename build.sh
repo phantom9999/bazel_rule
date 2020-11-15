@@ -9,7 +9,7 @@ wget https://github.com/google/snappy/archive/1.1.8.tar.gz \
     -O snappy-1.1.8.tar.gz
 tar -xf snappy-1.1.8.tar.gz;
 cd snappy-1.1.8;
-cmake . -DCMAKE_BUILD_TYPE=RelWithDebInfo \
+cmake3 . -DCMAKE_BUILD_TYPE=RelWithDebInfo \
     -DCMAKE_INSTALL_PREFIX=${workspace}/output \
     -DCMAKE_INSTALL_LIBDIR=lib \
     -DSNAPPY_BUILD_TESTS=OFF
