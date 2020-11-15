@@ -47,7 +47,6 @@ jobs:
     steps:
     - name: prepare env
       run: |
-        yum install -y epel-release
         yum install -y gcc-c++ cmake make wget autoconf automake libtool openssl-devel zlib-devel
     - uses: actions/checkout@v2
     - name: display env
