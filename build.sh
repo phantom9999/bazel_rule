@@ -1,6 +1,8 @@
 set -x
 set -e
 
+echo ${OS_ENV};
+
 workspace=`pwd`;
 
 # 拉取依赖
@@ -20,9 +22,9 @@ wget https://github.com/google/glog/archive/v0.4.0.tar.gz \
   -O glog-0.4.0.tar.gz
 tar -xf glog-0.4.0.tar.gz
 cd glog-0.4.0/
-cmake . -DCMAKE_BUILD_TYPE=RelWithDebInfo \
+cmake3 . -DCMAKE_BUILD_TYPE=RelWithDebInfo \
     -DCMAKE_CXX_FLAGS=-fPIC \
-    -DCMAKE_INSTALL_PREFIX=${workspace}/output 
+    -DCMAKE_INSTALL_PREFIX=${workspace}/output
 make install -j4
 
 cd ${workspace};
