@@ -36,5 +36,5 @@ make install -j4
 cd ${workspace};
 rm output/lib/libbrpc.so
 cp BUILD output/;
-cp ${OS_ENV}.WORKSPACE output/;
+cp ${OS_ENV}.WORKSPACE output/WORKSPACE;
 

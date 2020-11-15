@@ -9,7 +9,7 @@ git_repository(
     branch = "main",
 )
 
-load("com_github_phantom9999_bazel:package_rule.bzl", "get_package")
+load("@com_github_phantom9999_bazel:package_rule.bzl", "get_package")
 
 os_env = "centos8"
 
