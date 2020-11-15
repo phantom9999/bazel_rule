@@ -1,4 +1,4 @@
-#workspace(name = "com_github_demo")
+workspace(name = "com_github_phantom9999_bazel")
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 load("@//:package_rule.bzl", "try_package", "get_package")
 
