@@ -11,7 +11,7 @@ cd deps;
 wget https://github.com/phantom9999/bazel_rule/releases/download/glog-0.4.0/${OS_ENV}.tar.gz -O glog.tar.gz;
 wget https://github.com/phantom9999/bazel_rule/releases/download/gflags-2.2.2/${OS_ENV}.tar.gz -O gflags.tar.gz;
 wget https://github.com/phantom9999/bazel_rule/releases/download/protobuf-3.5.0/${OS_ENV}.tar.gz -O protobuf.tar.gz;
-wget https://github.com/phantom9999/bazel_rule/releases/download/leveldb-1.22/${OS_ENV}.zip -O leveldb.tar.gz;
+wget https://github.com/phantom9999/bazel_rule/releases/download/leveldb-1.22/${OS_ENV}.tar.gz -O leveldb.tar.gz;
 
 tar -xf glog.tar.gz;
 tar -xf gflags.tar.gz;
