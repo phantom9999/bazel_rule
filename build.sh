@@ -9,7 +9,8 @@ wget https://github.com/google/googletest/archive/release-1.10.0.tar.gz -O googl
 tar -xf googletest-release-1.10.0.tar.gz;
 cd googletest-release-1.10.0;
 
-cmake . -DCMAKE_BUILD_TYPE=RelWithDebInfo \
+cmake3 . -DCMAKE_BUILD_TYPE=RelWithDebInfo \
+    -DCMAKE_INSTALL_LIBDIR=lib \
     -DCMAKE_INSTALL_PREFIX=${workspace}/output;
 make install -j4
 
