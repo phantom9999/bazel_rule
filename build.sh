@@ -1,6 +1,8 @@
 set -x
 set -e
 
+echo ${OS_ENV};
+
 workspace=`pwd`;
 
 wget https://github.com/protocolbuffers/protobuf/archive/v3.5.0.tar.gz \
