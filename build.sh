@@ -1,6 +1,8 @@
 set -x
 set -e
 
+echo ${OS_ENV};
+
 workspace=`pwd`;
 
 mkdir deps;
