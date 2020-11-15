@@ -32,7 +32,7 @@ packages = {
 }
 
 alias_tag = {
-    "incubator-brpc-0.9.7": "incubator-brpc-0.9.7_beta1",
+    "incubator-brpc-0.9.7": "incubator-brpc-0.9.7_beta2",
 }
 
 def get_package(package, tag, os = "centos7"):
