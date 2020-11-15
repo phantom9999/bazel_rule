@@ -1,6 +1,8 @@
 set -x
 set -e
 
+echo ${OS_ENV};
+
 workspace=`pwd`;
 
 wget https://github.com/google/googletest/archive/release-1.10.0.tar.gz -O googletest-release-1.10.0.tar.gz
