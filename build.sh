@@ -26,7 +26,7 @@ wget https://github.com/apache/incubator-brpc/archive/0.9.7.tar.gz -O incubator-
 tar -xf incubator-brpc-0.9.7.tar.gz;
 cd incubator-brpc-0.9.7;
 
-cmake . -DCMAKE_BUILD_TYPE=RelWithDebInfo \
+cmake3 . -DCMAKE_BUILD_TYPE=RelWithDebInfo \
     -DCMAKE_INSTALL_PREFIX=${workspace}/output \
     -DCMAKE_INSTALL_LIBDIR=lib \
     -DWITH_GLOG=ON \
