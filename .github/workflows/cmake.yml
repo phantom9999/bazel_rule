@@ -7,16 +7,19 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    container: centos:7
 
     steps:
+    - name: prepare env
+      run: |
+        yum install -y gcc-c++ cmake3 make wget autoconf automake libtool
     - uses: actions/checkout@v2
     - name: display env
       run: |
         echo ${{runner.workspace}};
         echo $GITHUB_WORKSPACE;
         gcc --version
-        cmake --version
+        cmake3 --version
 
     - name: run build.sh
       shell: bash
@@ -26,6 +29,6 @@ jobs:
     - name: upload artifact
       uses: actions/upload-artifact@v2
       with:
-        name: output
+        name: centos7
         path: output
 
