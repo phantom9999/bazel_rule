@@ -25,7 +25,7 @@ packages = {
         "centos7": "",
         "centos8": "",
     }, 
-    "incubator-brpc-0.9.7_beta" : {
+    "incubator-brpc-0.9.7_beta1" : {
         "centos7": "",
         "centos8": "",
     }, 
@@ -39,10 +39,13 @@ def get_package(package, tag, os = "centos7"):
     if package == None or tag == None:
         return
     if package in native.existing_rules():
+        print("%s existed" % package)
         return
     tagname = alias_tag.get(tag)
     if tagname == None:
         tagname = tag
+    else:
+        print("change %s => %s" % (tag, tagname))
     tag_data = packages.get(tagname)
     if tag_data == None:
         return
