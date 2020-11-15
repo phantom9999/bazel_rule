@@ -2,39 +2,37 @@ load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
 packages = {
     "gflags-2.2.2" : {
-        "centos7": "",
-        "centos8": "",
+        "centos7": "3c8cb88947fbb42062e956992e18287779e43244e13cc7bd3872446f8052ec81",
+        "centos8": "4ce1b75b2b15f646ad3e0fe859d2ea74e94f435a913ec0538da65e66c6b6d8cb",
     }, 
     "glog-0.4.0" : {
-        "centos7": "",
-        "centos8": "",
-        "output": "43c674ed07cf50d006a5dd2d97c455108bcc3d15364eb38da0d343c459a46737",
+        "centos7": "f376954d2ded538b1861d1f2bdc1f97420649c635d00c257d0635742f9a4738e",
+        "centos8": "b48dda89dfb015f72610a040870d8a752e688db74b94d1d33edb8a861fa9e74b",
     }, 
     "protobuf-3.5.0" : {
         "centos7": "",
         "centos8": "",
-        "output": "3db8761ea3bbcb90ae8a0a99e7ee9870c98dbda00e22725728ea4d79ddd0a835",
     }, 
     "snappy-1.1.8" : {
         "centos7": "",
         "centos8": "",
-        "output": "b7be9a8d16947d0373ddc21f92c2e175674da4b0b430fa3840bc20b001bf0d72",
     }, 
     "leveldb-1.22" : {
         "centos7": "",
         "centos8": "",
-        "output": "eacf09277f0e1b9f2a62971bb243193edceaf0134bff5ae19921bdc70dcb902c",
     }, 
     "googletest-release-1.10.0" : {
         "centos7": "",
         "centos8": "",
-        "output": "b0bf2a49143dc501f635ef4306b7e3478d35ab012e8684e53a091b9463054bb3",
     }, 
     "incubator-brpc-0.9.7_beta" : {
         "centos7": "",
         "centos8": "",
-        "output": "b0bf2a49143dc501f635ef4306b7e3478d35ab012e8684e53a091b9463054bb3",
     }, 
+}
+
+alias_tag = {
+    "incubator-brpc-0.9.7": "incubator-brpc-0.9.7_beta",
 }
 
 def get_package(package, tag, os = "centos7"):
@@ -42,7 +40,10 @@ def get_package(package, tag, os = "centos7"):
         return
     if package in native.existing_rules():
         return
-    tag_data = packages.get(tag)
+    tagname = alias_tag.get(tag)
+    if tagname = None:
+        tagname = tag
+    tag_data = packages.get(tagname)
     if tag_data == None:
         return
     
@@ -53,7 +54,7 @@ def get_package(package, tag, os = "centos7"):
     
     http_archive(
         name = package,
-        url = "https://github.com/phantom9999/bazel_rule/releases/download/%s/%s.tar.gz" % (tag, os),
+        url = "https://github.com/phantom9999/bazel_rule/releases/download/%s/%s.tar.gz" % (tagname, os),
         sha256 = sha256_data,
     )
 
