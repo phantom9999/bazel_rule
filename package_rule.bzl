@@ -22,10 +22,10 @@ packages = {
         "centos8": "",
     }, 
     "googletest-release-1.10.0" : {
-        "centos7": "",
+        "centos7": "24b58681456f924793427ab90c409a8071cc608d3093f483828ce1cd16a3ab42",
         "centos8": "",
     }, 
-    "incubator-brpc-0.9.7_beta1" : {
+    "incubator-brpc-0.9.7_beta2" : {
         "centos7": "",
         "centos8": "",
     }, 
