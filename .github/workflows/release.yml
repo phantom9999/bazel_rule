@@ -22,8 +22,9 @@ jobs:
         echo $GITHUB_WORKSPACE;
         gcc --version
         cmake3 --version
+        export OS_ENV=centos7
 
-    - name: run build.sh
+    - name: build
       shell: bash
       run:
           sh build.sh
@@ -55,8 +56,9 @@ jobs:
         echo $GITHUB_WORKSPACE;
         gcc --version
         cmake3 --version
+        export OS_ENV=centos8
 
-    - name: run build.sh
+    - name: build
       shell: bash
       run:
           sh build.sh

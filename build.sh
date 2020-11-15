@@ -1,6 +1,8 @@
 set -x
 set -e
 
+echo ${OS_ENV};
+
 workspace=`pwd`;
 
 wget https://github.com/gflags/gflags/archive/v2.2.2.tar.gz -O gflags-2.2.2.tar.gz
