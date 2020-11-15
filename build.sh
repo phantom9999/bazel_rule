@@ -9,12 +9,12 @@ workspace=`pwd`;
 mkdir -p deps;
 cd deps;
 if [[ ${OS_ENV} == "centos7" ]]; then
-  wget https://github.com/phantom9999/bazel_rule/releases/download/gflags-2.2.2/centos7.zip -O gflags.zip
+  wget https://github.com/phantom9999/bazel_rule/releases/download/gflags-2.2.2/centos7.tar.gz -O gflags.tar.gz
 else
-  wget https://github.com/phantom9999/bazel_rule/releases/download/gflags-2.2.2/centos8.zip -O gflags.zip
+  wget https://github.com/phantom9999/bazel_rule/releases/download/gflags-2.2.2/centos8.tar.gz -O gflags.tar.gz
 fi
 
-unzip gflags.zip
+unzip gflags.tar.gz
 ls;
 
 cd ${workspace};
