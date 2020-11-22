@@ -5,10 +5,10 @@ echo ${OS_ENV};
 
 workspace=`pwd`;
 
-wget https://dl.bintray.com/boostorg/release/1.74.0/source/boost_1_74_0.tar.gz -O boost_1_74_0.tar.gz
+wget https://dl.bintray.com/boostorg/release/1.74.0/source/boost_1_74_0.tar.gz -O boost_1_74_0.tar.gz -o download.log
 tar -xf boost_1_74_0.tar.gz
 cd boost_1_74_0/;
 
+# 可选依赖 zlib, bzip2, zstd, lzma, iconv, icu
 sh bootstrap.sh
-./b2 variant=release link=static threading=multi runtime-link=shared --prefix=${workspace}/output -j4 install
-
+./b2 variant=release link=static threading=multi runtime-link=shared --without-python --prefix=${workspace}/output -j4 install
