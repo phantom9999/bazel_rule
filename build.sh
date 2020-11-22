@@ -5,11 +5,10 @@ echo ${OS_ENV};
 
 workspace=`pwd`;
 
-wget https://github.com/gflags/gflags/archive/v2.2.2.tar.gz -O gflags-2.2.2.tar.gz
-tar -xf gflags-2.2.2.tar.gz
-cd gflags-2.2.2/
+wget https://github.com/catchorg/Catch2/archive/v2.13.3.tar.gz -O Catch2-2.13.3.tar.gz
+tar -xf Catch2-2.13.3.tar.gz
+cd Catch2-2.13.3/
 cmake3 . -DCMAKE_BUILD_TYPE=RelWithDebInfo \
-    -DCMAKE_INSTALL_PREFIX=${workspace}/output \
-    -DGFLAGS_NAMESPACE=google
+    -DCMAKE_INSTALL_PREFIX=${workspace}/output
 make install -j4
 
