@@ -1,2 +1,4 @@
 gflags-2.2.2/
 v2.2.2.tar.gz
+.idea/
+cmake-build-debug/
