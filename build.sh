@@ -5,11 +5,10 @@ echo ${OS_ENV};
 
 workspace=`pwd`;
 
-wget https://github.com/gflags/gflags/archive/v2.2.2.tar.gz -O gflags-2.2.2.tar.gz
-tar -xf gflags-2.2.2.tar.gz
-cd gflags-2.2.2/
+wget https://github.com/libevent/libevent/archive/release-2.1.12-stable.tar.gz -O libevent-release-2.1.12-stable.tar.gz
+tar -xf libevent-release-2.1.12-stable.tar.gz
+cd libevent-release-2.1.12-stable/
 cmake3 . -DCMAKE_BUILD_TYPE=RelWithDebInfo \
-    -DCMAKE_INSTALL_PREFIX=${workspace}/output \
-    -DGFLAGS_NAMESPACE=google
+    -DCMAKE_INSTALL_PREFIX=${workspace}/output
 make install -j4
 
