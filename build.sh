@@ -5,11 +5,10 @@ echo ${OS_ENV};
 
 workspace=`pwd`;
 
-wget https://github.com/gflags/gflags/archive/v2.2.2.tar.gz -O gflags-2.2.2.tar.gz
-tar -xf gflags-2.2.2.tar.gz
-cd gflags-2.2.2/
-cmake3 . -DCMAKE_BUILD_TYPE=RelWithDebInfo \
-    -DCMAKE_INSTALL_PREFIX=${workspace}/output \
-    -DGFLAGS_NAMESPACE=google
-make install -j4
+wget https://dl.bintray.com/boostorg/release/1.74.0/source/boost_1_74_0.tar.gz -O boost_1_74_0.tar.gz
+tar -xvf boost_1_74_0.tar.gz
+cd boost_1_74_0/;
+
+sh bootstrap.sh
+./b2 --help
 
